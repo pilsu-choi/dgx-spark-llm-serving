@@ -1,0 +1,38 @@
+============ Serving Benchmark Result ============
+Successful requests:                     16        
+Failed requests:                         0         
+Maximum request concurrency:             8         
+Benchmark duration (s):                  68.84     
+Total input tokens:                      16000     
+Total generated tokens:                  8000      
+Request throughput (req/s):              0.23      
+Output token throughput (tok/s):         116.21    
+Peak output token throughput (tok/s):    56.00     
+Peak concurrent requests:                10.00     
+Total token throughput (tok/s):          348.63    
+---------------Time to First Token----------------
+Mean TTFT (ms):                          2792.58   
+Median TTFT (ms):                        1905.97   
+P99 TTFT (ms):                           4929.68   
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          53.22     
+Median TPOT (ms):                        47.18     
+P99 TPOT (ms):                           91.57     
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           154.52    
+Median ITL (ms):                         149.31    
+P99 ITL (ms):                            435.86    
+---------------Speculative Decoding---------------
+Acceptance rate (%):                     63.71     
+Acceptance length:                       2.91      
+Drafts:                                  2750      
+Draft tokens:                            8250      
+Accepted tokens:                         5256      
+Per-position acceptance (%):
+  Position 0:                            77.78     
+  Position 1:                            60.91     
+  Position 2:                            52.44     
+==================================================
+
+(APIServer pid=1) INFO 10-19 14:44:31 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.82, Accepted throughput: 83.69 tokens/s, Drafted throughput: 137.98 tokens/s, Accepted: 837 tokens, Drafted: 1380 tokens, Per-position acceptance rate: 0.802, 0.578, 0.439, Avg Draft acceptance rate: 60.7%
+(APIServer pid=1) INFO 10-19 14:44:41 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.84, Accepted throughput: 54.50 tokens/s, Drafted throughput: 89.10 tokens/s, Accepted: 545 tokens, Drafted: 891 tokens, Per-position acceptance rate: 0.774, 0.603, 0.458, Avg Draft acceptance rate: 61.2%

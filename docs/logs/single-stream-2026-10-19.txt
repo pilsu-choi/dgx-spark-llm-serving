@@ -1,0 +1,10 @@
+```python """ ISO-8601 date parser without using the datetime module.  Supports basic date formats: - YYYY-MM-DD - YYYYMMDD - YYYY-MM-DDTHH:MM:SS (with optional timezone offset Z or +HH:MM/-HH:MM) - YYYY-MM-DDTHH:MM:SS.ffffff (microseconds) - Fractional seconds with 1-6 digits  Returns a tuple: (yea ...
+TTFT 0.19s | 1024 tok | decode 26.3 tok/s
+```python import re import unittest   def parse_iso8601_date(date_string: str) -> tuple:     """     Parse an ISO-8601 date string (YYYY-MM-DD) without using datetime.          Args:         date_string: A string in ISO-8601 format, e.g., '2023-10-15'              Returns:         A tuple (year, mon ...
+TTFT 0.22s | 1024 tok | decode 29.8 tok/s
+```python def parse_iso8601(date_string: str) -> dict:     """     Parse an ISO-8601 date string without using datetime.          Supports formats like:     - YYYY-MM-DD     - YYYY-MM-DDTHH:MM:SS     - YYYY-MM-DDTHH:MM:SSZ     - YYYY-MM-DDTHH:MM:SS+HH:MM     - YYYY-MM-DDTHH:MM:SS-HH:MM          Retu ...
+TTFT 0.22s | 1024 tok | decode 30.5 tok/s
+
+(APIServer pid=1) INFO 10-19 14:43:01 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 3.58, Accepted throughput: 20.60 tokens/s, Drafted throughput: 24.00 tokens/s, Accepted: 206 tokens, Drafted: 240 tokens, Per-position acceptance rate: 0.900, 0.850, 0.825, Avg Draft acceptance rate: 85.8%
+(APIServer pid=1) INFO 10-19 14:43:11 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 3.41, Accepted throughput: 20.00 tokens/s, Drafted throughput: 24.90 tokens/s, Accepted: 200 tokens, Drafted: 249 tokens, Per-position acceptance rate: 0.904, 0.807, 0.699, Avg Draft acceptance rate: 80.3%
+(APIServer pid=1) INFO 10-19 14:43:21 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 3.81, Accepted throughput: 23.30 tokens/s, Drafted throughput: 24.90 tokens/s, Accepted: 233 tokens, Drafted: 249 tokens, Per-position acceptance rate: 0.976, 0.964, 0.867, Avg Draft acceptance rate: 93.6%
